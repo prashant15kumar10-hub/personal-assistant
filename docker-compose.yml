@@ -1,0 +1,11 @@
+services:
+  personal-assistant:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      PORT: 8000
+      RATE_LIMIT: 90
+    volumes:
+      - assistant-data:/app/data
+volumes:
+  assistant-data:
