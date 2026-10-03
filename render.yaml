@@ -2,6 +2,7 @@ services:
   - type: web
     name: personal-assistant
     runtime: docker
+    plan: free
     healthCheckPath: /health
     envVars:
       - key: RATE_LIMIT
